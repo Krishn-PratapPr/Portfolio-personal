@@ -117,17 +117,25 @@ h3 {
 }
 .btn-box a:hover {
   transform: scale(1.05);
+  background: rgb(20, 230, 146);
+  color: white;
+  cursor: pointer;
 }
 button:hover {
+  background: rgb(20, 230, 146);
+  color: white;
+  cursor: pointer;
   transform: scale(1.08);
 }
 
 .headings {
   font-size: 38px;
   font-weight: 700px;
-  color: #00abf9;
+  background: linear-gradient(to right, rgb(244, 0, 94), rgb(207, 217, 223));
+  -webkit-background-clip: text;
+  color: transparent;
   text-align: center;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .education {
@@ -145,7 +153,7 @@ button:hover {
   flex-direction: column;
   isolation: isolate;
   position: relative;
-  width: 18rem;
+  width: 20rem;
   background: #29292c;
   border-radius: 1rem;
   overflow: hidden;
@@ -217,6 +225,82 @@ button:hover {
   );
   opacity: 0;
   transition: opacity 300ms ease;
+}
+
+.projects {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.projects-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0.75rem;
+  background-color: white;
+  width: 300px;
+  height: 370px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.project-logo {
+  background-clip: border-box;
+  margin: 10px 5px;
+  border-radius: 15px;
+  background-color: rgb(33 150 243);
+  box-shadow: 0 10px 15px -3px rgba(33, 150, 243, 0.4),
+    0 4px 6px -4px rgba(33, 150, 243, 0.4);
+  height: 90px;
+  width: 80%;
+}
+.project-logo img {
+  height: 90px;
+  width: 100%;
+}
+.project-title {
+  color: rgb(38 50 56);
+  letter-spacing: 0;
+  line-height: 1.375;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.project-info {
+  padding: 0px 10px;
+  border: none;
+  text-align: center;
+  color: #011522;
+}
+
+.bottom-project {
+  border-radius: 10px;
+  width: 98%;
+  color: #011522;
+  border: 1px solid rgb(236 239 241);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba(47, 88, 121, 0.082);
+}
+.project-button {
+  font-weight: 500;
+  padding: 5px 10px;
+  margin: 10px;
+  background-color: rgb(33 150 243);
+  border-radius: 0.9rem;
+  cursor: pointer;
+  color: #011522;
+}
+.project-button a {
+  text-decoration: none;
+  color: #011522;
+}
+.project-tag {
+  font-weight: 300;
+  font-size: 0.75rem;
+  display: block;
 }
 
 .skills {
