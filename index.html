@@ -103,11 +103,11 @@
           </div>
           <div class="bottom-project">
             <p class="project-tag">#HTML #CSS #JS</p>
-            <div class="project-button">
+            <!-- <div class="project-button">
               <a href="https://github.com/Krishn-PratapPr/Portfolio-personal"
                 >Code</a
               >
-            </div>
+            </div> -->
             <div class="project-button">
               <a href="https://krishn-pratap-singh.site">View</a>
             </div>
@@ -285,13 +285,11 @@
             function (response) {
               console.log("SUCCESS!", response.status, response.text);
               alert("Email successfully sent!");
-              document.getElementById('contact-form').reset(); // Clear the form
+              document.getElementById("contact-form").reset(); // Clear the form
             },
             function (error) {
               console.error("FAILED...", error);
-              alert(
-                "Failed to send email."
-              );
+              alert("Failed to send email.");
             }
           );
         });
