@@ -92,18 +92,25 @@
       <div class="projects">
         <div class="projects-card">
           <div class="project-logo">
-            <img src="media/project1.png" alt="hi">
+            <img src="media/project1.png" alt="hi" />
           </div>
           <div class="project-info">
             <p class="project-title">Personal Portfolio website</p>
             <p>
-              Creating personal portfolio websiite is the basic project to check frontend development skills.
+              Creating personal portfolio websiite is the basic project to check
+              frontend development skills.
             </p>
           </div>
           <div class="bottom-project">
-            <p class="project-tag">#HTML #CSS </p>
-            <div class="project-button" ><a href="https://github.com/Krishn-PratapPr/Portfolio-personal">Code</a></div>
-            <div class="project-button" ><a href="https://krishn-pratap-singh.site">View</a></div>
+            <p class="project-tag">#HTML #CSS</p>
+            <div class="project-button">
+              <a href="https://github.com/Krishn-PratapPr/Portfolio-personal"
+                >Code</a
+              >
+            </div>
+            <div class="project-button">
+              <a href="https://krishn-pratap-singh.site">View</a>
+            </div>
           </div>
         </div>
       </div>
@@ -223,7 +230,7 @@
         </p>
         <div class="form">
           <div class="form-data">
-            <form>
+            <form id="contact-form">
               <label for="name">Name:</label>
               <input type="text" id="name" name="name" required />
 
@@ -249,5 +256,45 @@
         <p>© 2024 KRISHN PRATAP SINGH. All rights reserved.</p>
       </footer>
     </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("MjQUGNMiEgiKV8Tow");
+      })();
+    </script>
+
+    <script type="text/javascript">
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          // Collect form data
+          var formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value,
+          };
+
+          // Send the email using EmailJS
+          emailjs.send("service_voadgjh", "template_5w80yzl", formData).then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+              alert("Email successfully sent!");
+              document.getElementById('contact-form').reset(); // Clear the form
+            },
+            function (error) {
+              console.error("FAILED...", error);
+              alert(
+                "Failed to send email."
+              );
+            }
+          );
+        });
+    </script>
   </body>
 </html>
