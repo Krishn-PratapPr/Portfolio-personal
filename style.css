@@ -401,32 +401,35 @@ button:hover {
 .logo:hover {
   transform: scale(1.3);
 }
-.form {
-  padding: 15px 25px;
-  width: 340px;
-  display: block;
+.contact-form{
+  width: 310px;
   border-radius: 0.5rem;
   border: 0.5px solid #ccc;
 }
-@media (max-width: 500px) {
-  .form {
-    width: 280px;
+/* @media (max-width: 500px) {
+  .contact-form {
+    width: 300px;
   }
-}
+} */
 .form-data {
+
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;
+  flex-direction: column;
+  margin: none;
 }
 
 input,
 textarea {
-  width: 85%;
+ font-size: 1.0rem;
+width: 230px;
   padding: 10px 25px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 15px;
 }
+
 
 label {
   display: block;
@@ -449,7 +452,7 @@ button {
   font-size: 16px;
   color: #081b29;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   transition: transform 0.4s ease-in-out;
 }
 .container-footer {
