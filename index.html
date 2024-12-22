@@ -18,6 +18,7 @@
       <nav class="navbar">
         <a href="#home" class="active"> HOME</a>
         <a href="#education"> EDUCATION</a>
+        <a href="#projects"> PROJECTS</a>
         <a href="#skills"> SKILLS</a>
         <a href="#contact"> CONTACT US</a>
       </nav>
@@ -26,7 +27,12 @@
     <section id="home">
       <div class="home">
         <div class="home-content">
-          <h1>Hello! I'm <br />Krishn Pratap Singh</h1>
+          <h1>
+            Hello! <span class="heading-first">I'm</span> <br /><span
+              class="heading-first"
+              >K</span
+            >rishn Pratap Singh
+          </h1>
           <h3>Frontend Developer</h3>
           <p>
             I embarked on my tech journey after completing Intermediate studies
@@ -89,7 +95,8 @@
         </div>
       </div>
     </section>
-    <section id="#projects">
+
+    <section id="projects">
       <h2 class="headings">PROJECTS</h2>
       <div class="projects">
         <div class="projects-card">
@@ -115,6 +122,30 @@
             </div>
           </div>
         </div>
+
+        <div class="projects-card">
+          <div class="project-logo">
+            <img src="media/project2.png" alt="hi" />
+          </div>
+          <div class="project-info">
+            <p class="project-title">Voting Management System</p>
+            <p>
+             Description
+            </p>
+          </div>
+          <div class="bottom-project">
+            <p class="project-tag">#PHP #SQL #HTML #CSS </p>
+            <!-- <div class="project-button">
+              <a href="https://github.com/Krishn-PratapPr/Portfolio-personal"
+                >Code</a
+              >
+            </div> -->
+            <div class="project-button">
+              <a href="https://vms-krishna.freesite.online">View</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
     <section id="skills">
@@ -206,6 +237,20 @@
             </div>
             <div class="skills-name">GITHUB</div>
           </div>
+          <div class="skills-card">
+            <div class="skills-tools">
+              <div class="circle">
+                <span class="red box"></span>
+              </div>
+              <div class="circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="circle">
+                <span class="green box"></span>
+              </div>
+            </div>
+            <div class="skills-name">SQL</div>
+          </div>
         </div>
       </div>
     </section>
@@ -230,25 +275,20 @@
             >Or contact us through form below</span
           >
         </p>
-        <div class="contact-form">
-          <div class="form-data">
-            <form id="contact-form">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required />
+        <div class="form-container">
+          <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
 
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
 
-              <label for="message">Message:</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-              ></textarea>
-            </form>
-            <div class="btn-box" style="margin-bottom: 10px;"><button type="submit">Submit</button></div>
-          </div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <div class="button-container">
+              <button class="submit-button" type="submit">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
