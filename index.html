@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_v3.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -43,7 +43,7 @@
           </p>
           <div class="btn-box">
             <a href="#contact"> Contact me</a>
-            <a href="media/Resume.pdf" download="Resume.pdf">
+            <a href="/media/Resume.pdf" download="Resume.pdf">
               Resume
               <i
                 style="align-items: center; padding-left: 10px; margin-top: 3px"
@@ -53,7 +53,7 @@
           </div>
         </div>
         <div>
-          <img class="profile" src="media/profile.jpg" alt="Profile Image" />
+          <img class="profile" src="/media/profile.jpg" alt="Profile Image" />
         </div>
       </div>
     </section>
@@ -82,6 +82,7 @@
             &#128204; Firozabad, India
           </div>
         </div>
+
         <div class="education-content">
           <div class="education-glow"></div>
           <div class="education-borderglow"></div>
@@ -99,54 +100,56 @@
     <section id="projects">
       <h2 class="headings">PROJECTS</h2>
       <div class="projects">
-        <div class="projects-card">
-          <div class="project-logo">
-            <img src="media/project1.png" alt="hi" />
-          </div>
-          <div class="project-info">
-            <p class="project-title">Personal Portfolio website</p>
-            <p>
-              Creating personal portfolio websiite is the basic project to check
-              frontend development skills.
-            </p>
-          </div>
-          <div class="bottom-project">
-            <p class="project-tag">#HTML #CSS #JS</p>
-            <!-- <div class="project-button">
+        <div class="projects-container">
+          <div class="projects-card">
+            <div class="project-logo">
+              <img src="media/project1.png" alt="hi" />
+            </div>
+            <div class="project-info">
+              <p class="project-title">Personal Portfolio website</p>
+              <p>
+                Creating personal portfolio websiite is the basic project to
+                check frontend development skills.
+              </p>
+            </div>
+            <div class="bottom-project">
+              <p class="project-tag">#HTML #CSS #JS</p>
+              <!-- <div class="project-button">
               <a href="https://github.com/Krishn-PratapPr/Portfolio-personal"
                 >Code</a
               >
             </div> -->
-            <div class="project-button">
-              <a href="https://krishn-pratap-singh.site">View</a>
+              <div class="project-button">
+                <a href="https://krishn-pratap-singh.site">View</a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="projects-card">
-          <div class="project-logo">
-            <img src="media/project2.png" alt="hi" />
-          </div>
-          <div class="project-info">
-            <p class="project-title">Voting Management System</p>
-            <p>Description</p>
-          </div>
-          <div class="bottom-project">
-            <p class="project-tag">#PHP #SQL #HTML #CSS</p>
-            <!-- <div class="project-button">
+          <div class="projects-card">
+            <div class="project-logo">
+              <img src="media/project2.png" alt="hi" />
+            </div>
+            <div class="project-info">
+              <p class="project-title">Voting Management System</p>
+              <p>Description</p>
+            </div>
+            <div class="bottom-project">
+              <p class="project-tag">#PHP #SQL #HTML #CSS</p>
+              <!-- <div class="project-button">
               <a href="https://github.com/Krishn-PratapPr/Portfolio-personal"
                 >Code</a
               >
             </div> -->
-            <div class="project-button">
-              <a href="https://vms-krishna.freesite.online">View</a>
+              <div class="project-button">
+                <a href="https://vms-krishna.freesite.online">View</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
     <section id="skills">
-      <h2 class="headings">SKILLS</h2>
+      <h2 class="headings">SKILLS & TOOLS</h2>
       <div class="skills">
         <div class="skills-content">
           <div class="skills-card">
@@ -204,6 +207,34 @@
               </div>
             </div>
             <div class="skills-name">C</div>
+          </div>
+          <div class="skills-card">
+            <div class="skills-tools">
+              <div class="circle">
+                <span class="red box"></span>
+              </div>
+              <div class="circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="circle">
+                <span class="green box"></span>
+              </div>
+            </div>
+            <div class="skills-name">JAVA</div>
+          </div>
+          <div class="skills-card">
+            <div class="skills-tools">
+              <div class="circle">
+                <span class="red box"></span>
+              </div>
+              <div class="circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="circle">
+                <span class="green box"></span>
+              </div>
+            </div>
+            <div class="skills-name">REACT</div>
           </div>
           <div class="skills-card">
             <div class="skills-tools">
@@ -291,7 +322,7 @@
     </section>
     <div class="container-footer">
       <footer>
-        <p>© 2024 KRISHN PRATAP SINGH. All rights reserved.</p>
+        <p>© 2025 KRISHN PRATAP SINGH. All rights reserved.</p>
       </footer>
     </div>
 
@@ -305,6 +336,32 @@
       })();
     </script>
 
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript">
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          // Collect form data
+          var formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value,
+          };
+
+          // Send the email using EmailJS
+          emailjs.send("service_voadgjh", "template_5w80yzl", formData).then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+              alert("Email successfully sent!");
+              document.getElementById("contact-form").reset(); // Clear the form
+            },
+            function (error) {
+              console.error("FAILED...", error);
+              alert("Failed to send email.");
+            }
+          );
+        });
+    </script>
   </body>
 </html>
