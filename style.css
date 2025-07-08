@@ -7,8 +7,7 @@ body {
   color: #ededed;
 }
 .profile {
-  height: 350px;
-  width: 230px;
+ 
   border-radius: 90px;
   border: 5px solid #00abf9;
 }
@@ -242,6 +241,14 @@ button:hover {
   justify-content: center;
   display: flex;
 }
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
 .projects-card {
   align-items: center;
   display: flex;
@@ -250,10 +257,15 @@ button:hover {
   border-radius: 0.75rem;
   background-color: white;
   width: 290px;
-  margin: 0px 10px;
+  margin: 10px;
   height: 355px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+              0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.projects-card:hover {
+  transform: scale(1.03);
 }
 
 .project-logo {
@@ -262,7 +274,7 @@ button:hover {
   border-radius: 15px;
   background-color: rgb(33 150 243);
   box-shadow: 0 10px 15px 2px rgba(33, 150, 243, 0.4),
-    0 4px 6px -1px rgba(33, 150, 243, 0.4);
+              0 4px 6px -1px rgba(33, 150, 243, 0.4);
   height: 90px;
   width: 80%;
 }
@@ -285,7 +297,6 @@ button:hover {
   text-align: center;
   color: #011522;
 }
-
 .bottom-project {
   border-radius: 10px;
   width: 98%;
@@ -313,6 +324,37 @@ button:hover {
   font-weight: 300;
   font-size: 0.75rem;
   display: block;
+}
+
+/* --- Responsive Styling --- */
+@media (max-width: 768px) {
+  .projects-card {
+    width: 90%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-card {
+    width: 95%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .project-logo {
+    width: 90%;
+    height: auto;
+  }
+
+  .project-logo img {
+    height: auto;
+    width: 100%;
+  }
+
+  .bottom-project {
+    flex-direction: column;
+    gap: 5px;
+  }
 }
 
 .skills {
