@@ -18,6 +18,7 @@ document
         document.getElementById("contact-form").reset(); // Clear the form
       },
       function (error) {
+        
         console.error("FAILED...", error);
         alert("Failed to send email.");
       }
