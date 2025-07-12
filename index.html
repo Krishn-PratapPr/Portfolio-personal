@@ -98,7 +98,7 @@
     </section>
 
     <section id="projects">
-      <h2 class="headings">PROJECTS</h2>
+      <h2 class="headings">MINI PROJECTS</h2>
       <div class="projects">
         <div class="projects-container">
           <div class="projects-card">
@@ -113,14 +113,14 @@
               </p>
             </div>
             <div class="bottom-project">
-              <p class="project-tag">#HTML #CSS #JS</p>
-              <!-- <div class="project-button">
-              <a href="https://github.com/Krishn-PratapPr/Portfolio-personal"
-                >Code</a
-              >
-            </div> -->
+              <p class="project-tag">#HTML #CSS #JS #EmailJS</p>
               <div class="project-button">
-                <a href="https://krishn-pratap-singh.site">View</a>
+              <a href="https://github.com/Krishn-PratapPr/Portfolio-personal"
+                >Github</a
+              >
+            </div>
+              <div class="project-button">
+                <a href="https://krishn-pratappr.github.io/Portfolio-personal/">View</a>
               </div>
             </div>
           </div>
@@ -141,10 +141,32 @@
               >
             </div> -->
               <div class="project-button">
-                <a href="https://vms-krishna.freesite.online">View</a>
+                <a href="https://github.com/Krishn-PratapPr/voting-management-system">View</a>
               </div>
             </div>
           </div>
+
+          <div class="projects-card">
+            <div class="project-logo">
+              <img src="media/project3.png" alt="hi" />
+            </div>
+            <div class="project-info">
+              <p class="project-title">Weather App</p>
+              <p>Description</p>
+            </div>
+            <div class="bottom-project">
+              <p class="project-tag">#HTML #CSS #JS #API</p>
+              <div class="project-button">
+              <a href="https://github.com/Krishn-PratapPr/WeatherApp"
+                >Github</a
+              >
+            </div>
+              <div class="project-button">
+                <a href="https://krishn-pratappr.github.io/WeatherApp">View</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -335,33 +357,7 @@
         emailjs.init("MjQUGNMiEgiKV8Tow");
       })();
     </script>
-
-    <script type="text/javascript">
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Prevent the default form submission
-
-          // Collect form data
-          var formData = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            message: document.getElementById("message").value,
-          };
-
-          // Send the email using EmailJS
-          emailjs.send("service_voadgjh", "template_5w80yzl", formData).then(
-            function (response) {
-              console.log("SUCCESS!", response.status, response.text);
-              alert("Email successfully sent!");
-              document.getElementById("contact-form").reset(); // Clear the form
-            },
-            function (error) {
-              console.error("FAILED...", error);
-              alert("Failed to send email.");
-            }
-          );
-        });
-    </script>
+    <script src="script.js" ></script> 
+    
   </body>
 </html>
